@@ -16,3 +16,7 @@ function createEventListener(){
 let res3 = window.setTimeout(t,5000);
 }
 createEventListener();
+
+// javascript runtime environment
+
+// 1. Code  2. Parser  3. Compiler  4. Execution
