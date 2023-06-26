@@ -120,3 +120,26 @@ const res3 = radius.reduce(function (total,curr){
 },0);
 
 console.log(res3);
+
+// find max
+
+const ans = radius.reduce(function(max,curr){
+  if(curr>max){
+    max=curr;
+  }
+  return max;
+},0)
+
+console.log(ans);
+
+// How to use promises to avoid callback hell and inversion of control
+
+const fetchRes = fetch("https://www.boredapi.com/api/activity");
+
+fetchRes.then(function (data){
+  data.json().then( function (res){
+    console.log(res);
+  })
+})
+
+
