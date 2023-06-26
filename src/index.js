@@ -53,21 +53,29 @@ function hii() {
 // y();
 
 const radius = [1,2,3,4,5,6,7,8,9,10];
-let formula;
-const calculate = function (radius, formula) {
+
+const diameter = function (radius) {
+   return 2*radius;
+}
+
+const circumference = function (radius) {
+   return 2*Math.PI*radius;
+}
+
+const area = function (radius) {
+   return Math.PI*radius*radius;
+}
+
+const calculate = function (radius, logic) {
    const res = [];
    for (let i=0 ; i<radius.length; i++){
-    res.push(radius[i]*formula);
+    res.push(logic(radius[i]));
    }
    return res;
 }
-formula = 2;
-console.log(calculate(radius,formula));
-formula = 2*Math.PI;
-console.log(calculate(radius,formula));
-formula = Math.PI;
-const radius2 = radius;
-for (let i=0 ; i<radius.length; i++){
-  radius2[i] = radius[i]*radius[i];
- }
-console.log(calculate(radius2,formula));
+
+console.log(calculate(radius,diameter));
+
+console.log(calculate(radius,circumference));
+
+console.log(calculate(radius,area));
