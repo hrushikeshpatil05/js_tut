@@ -96,3 +96,27 @@ Array.prototype.calculate2 = function (logic) {
 
 console.log(radius.calculate2(area));
 
+// const res = radius.map((x) =>  x.toString(2));
+
+// console.log(res); 
+
+// filter function
+
+const res = radius.filter( function (x){
+  return x%2;
+})
+console.log(res);
+// or we can use arrow function
+
+const res2 = radius.filter((x) => x%2);
+
+console.log(res2);
+
+// reduce function 
+
+const res3 = radius.reduce(function (total,curr){
+  total = total + curr;
+  return total;
+},0);
+
+console.log(res3);
