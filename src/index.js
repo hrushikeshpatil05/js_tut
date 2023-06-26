@@ -74,8 +74,25 @@ const calculate = function (radius, logic) {
    return res;
 }
 
-console.log(calculate(radius,diameter));
+// console.log(calculate(radius,diameter));
 
-console.log(calculate(radius,circumference));
+// console.log(calculate(radius,circumference));
 
-console.log(calculate(radius,area));
+// console.log(calculate(radius,area));
+
+// mapping
+
+console.log(radius.map(area));
+
+// also we can make our map function like below
+
+Array.prototype.calculate2 = function (logic) {
+  const res = [];
+  for (let i=0 ; i<this.length; i++){
+   res.push(logic(this[i]));
+  }
+  return res;
+}
+
+console.log(radius.calculate2(area));
+
